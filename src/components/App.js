@@ -9,7 +9,7 @@ class App extends React.Component {
   renderNavigationData() {
     const { cities } = navigationData;
     return cities.map(city => {
-      return <li key={city.label}>{city.label}</li>;
+      return <span key={city.label}>{city.label}</span>;
     });
   }
 

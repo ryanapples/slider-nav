@@ -22,7 +22,6 @@ class Nav extends React.Component {
   getRectSizes() {
     const navElementRect = this.navRoot.getBoundingClientRect();
     const sizes = {};
-    console.log(sizes);
 
     Object.keys(this.navItemRefs).forEach(key => {
       const element = this.navItemRefs[key];
@@ -42,6 +41,24 @@ class Nav extends React.Component {
     this.setState({ activeCity: city });
   };
 
+  renderNavItems() {
+    return React.Children.map(this.props.children, (child, i) => {
+      let className =
+        child.key === this.state.activeCity
+          ? "navigation__city--active"
+          : "navigation__city";
+      return (
+        <li
+          className={className}
+          onClick={() => this.onNavItemClick(child.key)}
+          ref={el => (this.navItemRefs[child.key] = el)}
+        >
+          {child}
+        </li>
+      );
+    });
+  }
+
   onResize() {
     if (this.state.activeCity === null) {
       return;
@@ -59,22 +76,7 @@ class Nav extends React.Component {
       <SelectedCityContext.Provider value={this.state.activeCity}>
         <nav className="navigation">
           <ul className="navigation__city-list" ref={el => (this.navRoot = el)}>
-            {React.Children.map(this.props.children, (child, i) => {
-              let className = "navigation__city";
-              if (child.key === this.state.activeCity) {
-                className = `navigation__city--active`;
-              }
-              return (
-                <div
-                  className={className}
-                  onClick={() => this.onNavItemClick(child.key)}
-                  ref={el => (this.navItemRefs[child.key] = el)}
-                >
-                  {child}
-                </div>
-              );
-            })}
-
+            {this.renderNavItems()}
             <div
               className="navigation__underline"
               style={this.onResize()}
