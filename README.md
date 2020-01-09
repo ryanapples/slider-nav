@@ -10,6 +10,7 @@ The goal was to keep library usage to a minimum, so the technologies used for th
 
 **NOTE:** This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### **Steps**
 1. Configure project (React Components, Sass)
 
 2. Build navigation list based on local `navigation.json` file
