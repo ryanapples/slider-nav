@@ -46,9 +46,12 @@ class Nav extends React.Component {
     if (this.state.activeCity === null) {
       return;
     }
-    const size = this.state.sizes[this.state.activeCity];
 
-    return { left: `${size.leftPosition}px`, right: `${size.rightPosition}px` };
+    const sizeValue = this.state.sizes[this.state.activeCity];
+    return {
+      left: `${sizeValue.leftPosition}px`,
+      right: `${sizeValue.rightPosition}px`
+    };
   }
 
   render() {
