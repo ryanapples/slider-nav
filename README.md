@@ -24,7 +24,7 @@ The goal was to keep library usage to a minimum, so the technologies used for th
 
 6. Work on second iteration. Goal is to refactor code in existing Components, and modularize Components further. For example, new component list may have the following files: `App.js`, `Navigation.js`, `NavItem.js`, `SelectedCityTime.js`.
 
-## 🗺 **Project Challenges**
+## 🤔 **Project Challenges**
 
 ---
 
