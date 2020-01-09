@@ -27,7 +27,7 @@ The goal was to keep library usage to a minimum, so the technologies used for th
 
 During project build (v1), the sliding indication bar was one of the main challenges, aside from running into some obstacles with [React Refs](https://reactjs.org/docs/refs-and-the-dom.html). Initially, I attempted to render the navigation list items within a method in the Navigation Class Component. Fell into the rabbit hole about [Forwarding Refs](https://reactjs.org/docs/forwarding-refs.html), but for the sake of time - I chose to refactor my code and save it for my second iteration.
 
-Issue: My `navItemRef` object values were not coming out as expected, with values being `undefined` or `null`.
+Issue: My `navItemRef` object properties and values were not coming out as expected, with values being set as `undefined` or `null`.
 
 ```
   renderNavigationData() {
