@@ -19,7 +19,7 @@ The goal was to keep library usage to a minimum, so the technologies used for th
 
 4. Discovery time on how to determine sliding indication bar position
 
-5. Include React ConText system for selected city time
+5. Include React Context System for selected city time
 
 6. Work on second iteration. Goal is to refactor code in existing Components, and modularize Components further. For example, new component list may have the following files: `App.js`, `Navigation.js`, `NavItem.js`, `SelectedCityTime.js`.
 
