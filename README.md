@@ -18,17 +18,19 @@ The goal was to keep library usage to a minimum, so the technologies used for th
 
 2. Build navigation list based on local `navigation.json` file
 
-3. Work through navigation component State based on user interaction.
+3. Work through navigation component State based on user interaction
 
-4. Discovery time on how to determine sliding indication bar position.
+4. Discovery time on how to determine sliding indication bar position
 
-5. Work on second iteration. Goal is to create separate React Components for specific elements. For example, new component list may have the following files: `App.js`, `Navigation.js`, `NavItem.js`, `SelectedCityTime.js`.
+5. Include React ConText system for selected city time
+
+6. Work on second iteration. Goal is to refactor code in existing Components, and modularize Components further. For example, new component list may have the following files: `App.js`, `Navigation.js`, `NavItem.js`, `SelectedCityTime.js`.
 
 ## 🗺 **Project Challenges**
 
 ---
 
-During project build (v1), I ran into some trouble with [React Refs](https://reactjs.org/docs/refs-and-the-dom.html). Initially, I attempted to render the navigation list items within a method in the Navigation Class Component. Fell into the rabbit hole about [Forwarding Refs](https://reactjs.org/docs/forwarding-refs.html), but for the sake of time - I chose to refactor my code and save it for my second iteration.
+During project build (v1), the sliding indication bar was one of the main challenges. aside from running into some obstacles with [React Refs](https://reactjs.org/docs/refs-and-the-dom.html). Initially, I attempted to render the navigation list items within a method in the Navigation Class Component. Fell into the rabbit hole about [Forwarding Refs](https://reactjs.org/docs/forwarding-refs.html), but for the sake of time - I chose to refactor my code and save it for my second iteration.
 
 Issue: My `navItemRef` object values were not coming out as expected, with values being `undefined` or `null`.
 
@@ -54,6 +56,8 @@ My `ref` issue above prevented me from using the `Element.getBoundingClientRect(
 _Side note_ - I was lucky enough to discover the `Element.getBoundingClientRect()` method a few weeks ago when I wanted to figure out the size of such element and its position relative to its parent. With `DOMRect` object, I was able to determine the `left` and `right` properties of each navigation item.
 
 https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+
+Lastly, the selected city functionality could be done more optimally and will be refactored during the next iteration.
 
 ## Available Scripts
 
