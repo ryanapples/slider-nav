@@ -6,8 +6,6 @@ Objective of application is to create a simple, minimalist navigation bar that i
 
 ## 🛠 Build Approach
 
----
-
 The goal was to keep library usage to a minimum, so the technologies used for this small feature/app were [React](https://github.com/facebook/react/) and [Sass](https://github.com/sass).
 
 **NOTE:** This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -25,8 +23,6 @@ The goal was to keep library usage to a minimum, so the technologies used for th
 6. Work on second iteration. Goal is to refactor code in existing Components, and modularize Components further. For example, new component list may have the following files: `App.js`, `Navigation.js`, `NavItem.js`, `SelectedCityTime.js`.
 
 ## 🤔 **Project Challenges**
-
----
 
 During project build (v1), the sliding indication bar was one of the main challenges, aside from running into some obstacles with [React Refs](https://reactjs.org/docs/refs-and-the-dom.html). Initially, I attempted to render the navigation list items within a method in the Navigation Class Component. Fell into the rabbit hole about [Forwarding Refs](https://reactjs.org/docs/forwarding-refs.html), but for the sake of time - I chose to refactor my code and save it for my second iteration.
 
